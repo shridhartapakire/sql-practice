@@ -26,3 +26,15 @@ WHERE id = 1;
 -- Delete data
 DELETE FROM employees
 WHERE id = 1;
+
+-- Create employees table
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT
+);
+
+-- View table structure
+DESCRIBE employees;
