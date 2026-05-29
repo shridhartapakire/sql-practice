@@ -38,3 +38,25 @@ CREATE TABLE employees (
 
 -- View table structure
 DESCRIBE employees;
+
+-- Aggregate Functions
+
+-- Count total employees
+SELECT COUNT(*) AS total_employees
+FROM employees;
+
+-- Total salary expense
+SELECT SUM(salary) AS total_salary
+FROM employees;
+
+-- Average salary
+SELECT AVG(salary) AS average_salary
+FROM employees;
+
+-- Highest salary
+SELECT MAX(salary) AS highest_salary
+FROM employees;
+
+-- Lowest salary
+SELECT MIN(salary) AS lowest_salary
+FROM employees;
