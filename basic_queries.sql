@@ -60,3 +60,20 @@ FROM employees;
 -- Lowest salary
 SELECT MIN(salary) AS lowest_salary
 FROM employees;
+
+-- GROUP BY Examples
+
+-- Total salary by department
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department;
+
+-- Average salary by department
+SELECT department, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department;
+
+-- Number of employees in each department
+SELECT department, COUNT(*) AS employee_count
+FROM employees
+GROUP BY department;
