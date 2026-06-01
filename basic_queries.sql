@@ -77,3 +77,23 @@ GROUP BY department;
 SELECT department, COUNT(*) AS employee_count
 FROM employees
 GROUP BY department;
+
+-- HAVING Examples
+
+-- Departments with average salary above 60000
+SELECT department, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 60000;
+
+-- Departments with more than 5 employees
+SELECT department, COUNT(*) AS employee_count
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+
+-- Departments with total salary above 100000
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department
+HAVING SUM(salary) > 100000;
