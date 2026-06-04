@@ -97,3 +97,19 @@ SELECT department, SUM(salary) AS total_salary
 FROM employees
 GROUP BY department
 HAVING SUM(salary) > 100000;
+
+-- Create departments table
+
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(50)
+);
+
+-- INNER JOIN
+
+SELECT
+    employees.name,
+    departments.department_name
+FROM employees
+INNER JOIN departments
+ON employees.department_id = departments.department_id;
