@@ -132,3 +132,30 @@ SELECT
 FROM employees
 RIGHT JOIN departments
 ON employees.department_id = departments.department_id;
+
+-- DISTINCT
+
+SELECT DISTINCT department
+FROM employees;
+
+
+-- ORDER BY
+
+SELECT *
+FROM employees
+ORDER BY salary DESC;
+
+
+-- LIMIT
+
+SELECT *
+FROM employees
+ORDER BY salary DESC
+LIMIT 3;
+
+
+-- Combined Example
+
+SELECT DISTINCT department
+FROM employees
+ORDER BY department;
