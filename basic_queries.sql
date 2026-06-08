@@ -159,3 +159,36 @@ LIMIT 3;
 SELECT DISTINCT department
 FROM employees
 ORDER BY department;
+
+-- Subquery Example 1
+-- Employees earning above average salary
+
+SELECT name, salary
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+);
+
+
+-- Subquery Example 2
+-- Employee(s) with highest salary
+
+SELECT name, salary
+FROM employees
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM employees
+);
+
+
+-- Subquery Example 3
+-- Employees in IT department
+
+SELECT name
+FROM employees
+WHERE department_id = (
+    SELECT department_id
+    FROM departments
+    WHERE department_name = 'IT'
+);
